@@ -11,7 +11,7 @@ docker pull 1967675298/tmodload-docker:latest
 
 ## Quick Start
 
-    docker run -d --name tmod -p 7777:7777 -v /etc/localtime:/etc/localtime:ro rfvgyhn/tmodloader
+    docker run -d --name tmod -p 7777:7777 -v /etc/localtime:/etc/localtime:ro 1967675298/tmodload-docker
 
 # Adding worlds
 
