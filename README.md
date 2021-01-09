@@ -7,7 +7,7 @@ Terraria server 1.3.5.3 with tModLoader v0.11.8.
 Supports graceful shutdown (saves when the container receives a stop command) and also supports autosaving every 10 minutes (configurable, see [Environment Variables] below).
 
 ## Pull images
-docker push 1967675298/tmodload-docker:latest
+docker pull 1967675298/tmodload-docker:latest
 
 ## Quick Start
 
