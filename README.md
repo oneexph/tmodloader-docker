@@ -15,19 +15,19 @@ docker pull 1967675298/tmodload-docker:latest
 
 # Adding worlds
 
-    docker run -d --name tmod -p 7777:7777 -v /etc/localtime:/etc/localtime:ro -v $(pwd)/data:/terraria rfvgyhn/tmodloader
+    docker run -d --name tmod -p 7777:7777 -v /etc/localtime:/etc/localtime:ro -v $(pwd)/data:/terraria 1967675298/tmodload-docker
 
 # Server Config File
 
 You can mount a config file. This allows you to specify server and world settings. If you don't specify one, a [default] will be used. See [wiki] for file format details.
 
-    docker run -d --name tmod -p 7777:7777 -v /etc/localtime:/etc/localtime:ro -v $(pwd)/data:/terraria -v $(pwd)/config.txt:/terraria-server/config.txt rfvgyhn/tmodloader
+    docker run -d --name tmod -p 7777:7777 -v /etc/localtime:/etc/localtime:ro -v $(pwd)/data:/terraria -v $(pwd)/config.txt:/terraria-server/config.txt 1967675298/tmodload-docker
 
 # Initial Setup
 
 If you want to use the server's mod browser to install and enable mods, run an interactive container with the `setup` parameter appended to the end.
 
-    docker run -it --rm -v $(pwd)/data:/terraria rfvgyhn/tmodloader setup
+    docker run -it --rm -v $(pwd)/data:/terraria 1967675298/tmodload-docker setup
 
 After setting up your mods, and optionally setting up a world, press `Ctrl+C` to exit the container. Then you can use the normal docker command to run your server. Note that you'll see the mods and the `enabled.json` files appear in your mods folder on the host.
 
