@@ -27,7 +27,7 @@ You can mount a config file. This allows you to specify server and world setting
 
 If you want to use the server's mod browser to install and enable mods, run an interactive container with the `setup` parameter appended to the end.
 
-    docker run -it --rm -v $(pwd)/data:/terraria 1967675298/tmodload-docker setup
+    docker run -it --name tmod --rm -v $(pwd)/data:/terraria -p 7777:7777 1967675298/tmodload-docker setup
 
 After setting up your mods, and optionally setting up a world, press `Ctrl+C` to exit the container. Then you can use the normal docker command to run your server. Note that you'll see the mods and the `enabled.json` files appear in your mods folder on the host.
 
